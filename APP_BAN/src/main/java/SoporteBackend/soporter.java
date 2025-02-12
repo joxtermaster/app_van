@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
+import java.sql.Timestamp;
 
 
 public class soporter {
@@ -173,22 +174,21 @@ public class soporter {
     
     }
     
-    public void  Creat_viajes(String chofer,int ruta,int pasajeros){
+    public void  Creat_viajes(String Chofer,int Ruta,int Pasajeros, String TiempoDinal){
         
         cconecion conexion = new cconecion();
         Statement state;
         
     try{
         
-    CallableStatement cs = conexion.establecer().prepareCall("insert into viajes (chofer,reservador,pasajeros,ruta) values (?,?,?,?);");
+    CallableStatement cs = conexion.establecer().prepareCall("insert into viajes (chofer,reservador,pasajeros,ruta,inicio,final) values (?,?,?,?,?,?);");
     
-        System.out.println(""+getUsuario());
-        System.out.println(""+chofer);
-    cs.setString(1, chofer);
+    cs.setString(1, Chofer);
     cs.setString(2,getUsuario());
-    cs.setInt(3,pasajeros);
-    cs.setInt(4,ruta);
-    
+    cs.setInt(3,Pasajeros);
+    cs.setInt(4,Ruta);
+    cs.setTimestamp(5, new Timestamp(System.currentTimeMillis()));
+    cs.setString(6,TiempoDinal);
     
     cs.execute();
     

@@ -58,7 +58,7 @@ public class Inicio_Principal extends javax.swing.JFrame {
 
         panelRoundContenedorS.setBackground(new java.awt.Color(255, 255, 255));
 
-        panelRoundContenedor.setBackground(new java.awt.Color(248, 248, 248));
+        panelRoundContenedor.setBackground(new java.awt.Color(248, 243, 243));
         panelRoundContenedor.setRoundBottomLeft(70);
         panelRoundContenedor.setRoundBottomRight(70);
         panelRoundContenedor.setRoundTopLeft(70);
@@ -85,6 +85,11 @@ public class Inicio_Principal extends javax.swing.JFrame {
         jButtonReservar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 jButtonReservarMouseMoved(evt);
+            }
+        });
+        jButtonReservar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonReservarMouseClicked(evt);
             }
         });
 
@@ -168,7 +173,7 @@ public class Inicio_Principal extends javax.swing.JFrame {
         );
         jPanelContenedorSSLayout.setVerticalGroup(
             jPanelContenedorSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 299, Short.MAX_VALUE)
+            .addGap(0, 303, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanelComtenedorPLayout = new javax.swing.GroupLayout(jPanelComtenedorP);
@@ -181,9 +186,9 @@ public class Inicio_Principal extends javax.swing.JFrame {
         jPanelComtenedorPLayout.setVerticalGroup(
             jPanelComtenedorPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelComtenedorPLayout.createSequentialGroup()
-                .addGap(0, 0, 0)
+                .addContainerGap()
                 .addComponent(jPanelContenedorSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(panelRoundContenedorS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -246,6 +251,10 @@ public class Inicio_Principal extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButtonPlanearMouseClicked
+
+    private void jButtonReservarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonReservarMouseClicked
+    
+    }//GEN-LAST:event_jButtonReservarMouseClicked
 
     public void motarimagen(String ruta, JPanel panel) {
         
