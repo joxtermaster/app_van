@@ -93,11 +93,6 @@ public class login_visual extends javax.swing.JFrame {
                 jButtonConnectarMouseMoved(evt);
             }
         });
-        jButtonConnectar.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jButtonConnectarFocusLost(evt);
-            }
-        });
         jButtonConnectar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonConnectarActionPerformed(evt);
@@ -249,10 +244,6 @@ public class login_visual extends javax.swing.JFrame {
         jTextFieldClave.setForeground(Color.black);
          text_clave= false;
     }//GEN-LAST:event_jTextFieldClaveFocusGained
-
-    private void jButtonConnectarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jButtonConnectarFocusLost
-     evt.getSource();
-    }//GEN-LAST:event_jButtonConnectarFocusLost
 
     public void motarimagen(String ruta, JPanel panel) {
         
